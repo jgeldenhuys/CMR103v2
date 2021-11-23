@@ -11,9 +11,7 @@ public class GHPickUpIndicator : OVRGrabbable
     OVRHapticsClip ovrClip;
 
     // Start is called before the first frame update
-#pragma warning disable CS0114 // 'GHPickUpIndicator.Start()' hides inherited member 'OVRGrabbable.Start()'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword.
     void Start()
-#pragma warning restore CS0114 // 'GHPickUpIndicator.Start()' hides inherited member 'OVRGrabbable.Start()'. To make the current member override that implementation, add the override keyword. Otherwise add the new keyword.
     {
         base.Start();
         r = GetComponent<Renderer>();
@@ -34,7 +32,8 @@ public class GHPickUpIndicator : OVRGrabbable
         base.GrabBegin(hand, grabPoint);
 
 
-        
+        //now do the things I want to do
+        r.material.color = Color.blue;
 
         //add the sound play for the pickup
         myAudioSource.Play();
