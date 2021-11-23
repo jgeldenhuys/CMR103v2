@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5094679868079440468}
   - component: {fileID: 5094679868079440475}
   - component: {fileID: 5094679868079440474}
-  - component: {fileID: 2028971460}
+  - component: {fileID: 5721099248715920053}
   m_Layer: 0
   m_Name: plate3
   m_TagString: bat
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5364518921972263226}
   m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: 0.447, y: 1.014, z: -1.077}
+  m_LocalPosition: {x: -1.493, y: 1.601, z: -4.882}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!114 &2028971460
+--- !u!114 &5721099248715920053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,5 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f970752e94f63f54580f0e48d7ca7ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brokenVersion: {fileID: 5364518921972263226}
-  plate: {fileID: 0}
+  brokenVersion: {fileID: 0}
+  brokenVersion2: {fileID: 0}
+  brokenVersion3: {fileID: 0}
+  brokenVersion4: {fileID: 0}
+  batThrust: 20
+  impulseAmount: 1000
