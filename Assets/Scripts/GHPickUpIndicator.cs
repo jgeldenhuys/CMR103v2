@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GHPickUpIndicator : OVRGrabbable
 {
-    Renderer r;
+    public Renderer handleRenderer;
+    public Renderer metalRenderer;
+
+    public Material onHandle, offHandle, onMetal, offMetal;
 
     AudioSource myAudioSource;
     public AudioClip soundFX;
@@ -14,7 +17,7 @@ public class GHPickUpIndicator : OVRGrabbable
     void Start()
     {
         base.Start();
-        r = GetComponent<Renderer>();
+        //batRenderer = GetComponent<Renderer>();
         myAudioSource = GetComponent<AudioSource>();
 
         //create haptic clip 
@@ -24,7 +27,7 @@ public class GHPickUpIndicator : OVRGrabbable
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
@@ -33,7 +36,8 @@ public class GHPickUpIndicator : OVRGrabbable
 
 
         //now do the things I want to do
-        r.material.color = Color.blue;
+        handleRenderer.material = onHandle;
+        metalRenderer.material = onMetal;
 
         //add the sound play for the pickup
         myAudioSource.Play();
@@ -59,6 +63,8 @@ public class GHPickUpIndicator : OVRGrabbable
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         base.GrabEnd(linearVelocity, angularVelocity);
-        r.material.color = Color.green;
+        //r.material.color = Color.green;
+        handleRenderer.material = offHandle;
+        metalRenderer.material = offMetal;
     }
 }
