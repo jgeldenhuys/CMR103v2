@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class smash : MonoBehaviour
 {
+    public GameObject mainObject;
     public GameObject brokenVersion;
     public GameObject brokenVersion2;
     public GameObject brokenVersion3;
@@ -54,8 +55,8 @@ public class smash : MonoBehaviour
          
 
             
-            //get rid of the big cube
-            GameObject.Destroy(gameObject);
+            //get rid of the main object
+            GameObject.Destroy(mainObject);
 
         }
     }
